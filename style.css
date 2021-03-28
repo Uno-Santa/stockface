@@ -146,6 +146,20 @@ body {
   padding: 20px;
 }
 
+.try-again-btn {
+  border-radius: 40px;
+  border: solid 1.5px #abacad;
+  background-color: #abacad;
+}
+
+.try-again-text {
+  display: block;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #ffffff;
+  padding: 4px 15px;
+}
+
 .remove-image {
   width: 200px;
   margin: 0;
@@ -209,7 +223,7 @@ body {
 .bar-container {
   height: 2.7rem;
 }
-.A01-box {
+.A01-box, .A11-box, .A21-box, .A31-box, .A41-box, .B01-box{
   position: absolute;
   top: 0;
   left: 0;
@@ -218,7 +232,7 @@ body {
   width: 100%;
   background-color: rgba(117, 204, 84, 0.2);
 }
-.A01-bar {
+.A01-bar, .A11-bar, .A21-bar, .A31-bar, .A41-bar, .B01-bar{
   position: absolute;
   top: 0;
   left: 0;
@@ -226,7 +240,7 @@ body {
   border-radius: 10px;
   background-color: rgba(117, 204, 84, 1);
 }
-.A02-box {
+.A02-box, .A12-box, .A22-box, .A32-box, .A42-box,.B02-box {
   position: absolute;
   top: 0;
   left: 0;
@@ -235,7 +249,7 @@ body {
   width: 100%;
   background-color: rgba(234, 227, 27, 0.2);
 }
-.A02-bar {
+.A02-bar, .A12-bar, .A22-bar, .A32-bar, .A42-bar, .B02-bar {
   position: absolute;
   top: 0;
   left: 0;
@@ -243,7 +257,7 @@ body {
   border-radius: 10px;
   background-color: rgba(234, 227, 27, 1);
 }
-.A03-box {
+.A03-box, .A13-box, .A23-box, .A33-box, .A43-box, .B03-box {
   position: absolute;
   top: 0;
   left: 0;
@@ -252,7 +266,7 @@ body {
   width: 100%;
   background-color: rgba(27, 175, 234, 0.2);
 }
-.A03-bar {
+.A03-bar, .A13-bar, .A23-bar, .A33-bar, .A43-bar, .B03-bar {
   position: absolute;
   top: 0;
   left: 0;
@@ -260,7 +274,7 @@ body {
   border-radius: 10px;
   background-color: rgba(27, 175, 234, 1);
 }
-.A04-box {
+.A04-box, .A14-box, .A24-box, .A34-box, .A44-box, .B04-box {
   position: absolute;
   top: 0;
   left: 0;
@@ -269,7 +283,7 @@ body {
   width: 100%;
   background-color: rgba(251, 176, 59, 0.2);
 }
-.A04-bar {
+.A04-bar, .A14-bar, .A24-bar, .A34-bar, .A44-bar, .B04-bar {
   position: absolute;
   top: 0;
   left: 0;
@@ -277,7 +291,7 @@ body {
   border-radius: 10px;
   background-color: rgba(251, 176, 59, 1);
 }
-.A05-box {
+.A05-box, .A15-box, .A25-box, .A35-box, .A45-box, .B05-box {
   position: absolute;
   top: 0;
   left: 0;
@@ -286,7 +300,7 @@ body {
   width: 100%;
   background-color: rgba(195, 140, 102, 0.2);
 }
-.A05-bar {
+.A05-bar, .A15-bar, .A25-bar, .A35-bar, .A45-bar, .B05-bar {
   position: absolute;
   top: 0;
   left: 0;
@@ -294,7 +308,7 @@ body {
   border-radius: 10px;
   background-color: rgba(195, 140, 102, 1);
 }
-.A06-box {
+.A06-box, .A16-box, .A26-box, .A36-box, .A46-box, .B06-box {
   position: absolute;
   top: 0;
   left: 0;
@@ -303,7 +317,7 @@ body {
   width: 100%;
   background-color: rgba(49, 132, 155, 0.2);
 }
-.A06-bar {
+.A06-bar, .A16-bar, .A26-bar, .A36-bar, .A46-bar, .B06-bar {
   position: absolute;
   top: 0;
   left: 0;
@@ -311,7 +325,7 @@ body {
   border-radius: 10px;
   background-color: rgba(49, 132, 155, 1);
 }
-.A07-box {
+.A07-box, .A17-box, .A27-box, .A37-box, .A47-box, .B07-box {
   position: absolute;
   top: 0;
   left: 0;
@@ -320,7 +334,7 @@ body {
   width: 100%;
   background-color: rgba(235, 166, 190, 0.2);
 }
-.A07-bar {
+.A07-bar, .A17-bar, .A27-bar, .A37-bar, .A47-bar, .B07-bar {
   position: absolute;
   top: 0;
   left: 0;
@@ -328,7 +342,7 @@ body {
   border-radius: 10px;
   background-color: rgba(235, 166, 190, 1);
 }
-.A08-box {
+.A08-box, .A18-box, .A28-box, .A38-box, .A48-box, .B08-box {
   position: absolute;
   top: 0;
   left: 0;
@@ -337,7 +351,7 @@ body {
   width: 100%;
   background-color: rgba(159, 52, 235, 0.2);
 }
-.A08-bar {
+.A08-bar, .A18-bar, .A28-bar, .A38-bar, .A48-bar, .B08-bar {
   position: absolute;
   top: 0;
   left: 0;
@@ -346,7 +360,40 @@ body {
   background-color: rgba(159, 52, 235, 1);
 }
 
-
+.A09-box, .A19-box, .A29-box, .A39-box, .A49-box, .B09-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(67, 230, 205, 0.2);
+}
+.A09-bar, .A19-bar, .A29-bar, .A39-bar, .A49-bar, .B09-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(67, 230, 205, 1);
+}
+.A10-box, .A20-box, .A30-box, .A40-box, .A50-box, .B10-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(230, 67, 222, 0.2);
+}
+.A10-bar, .A20-bar, .A30-bar, .A40-bar, .A50-bar, .B10-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(230, 67, 222, 1);
+}
 
 
 
