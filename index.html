@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+		<title>동학개미 어서오고!</title>
+		<link href="https://fonts.googleapis.com/css?family=Gamja+Flower:400" rel="stylesheet">
+		
+		
+		<link href="https://fonts.googleapis.com/css2?family=Cute+Font&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="style.css" />
+		
+	</head>
+	<body>
+		<!--네비게이션바 start-->
+		<nav class="navbar navbar-expand-lg navbar-light nav-distance">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="#">동학개미 어서오고!</a>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarNav"
+					aria-controls="navbarNav"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link active" aria-current="page" href="#"></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="https://www.youtube.com/results?search_query=%EC%A1%B0%EC%BD%94%EB%94%A9">Thanks to JoCoding</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#"></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"
+								></a
+							>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!--네비게이션바 end-->
+<div class="main">
+	
+		
+		<section class="section">
+			<h1 class="title">동학개미 어서오고!</h1>
+			<h2 class="subtitle">당신의 관상과 어울리는 주식을 추천해주지!</h2>
+		</section>
+
+		<h3 class="pb-2 d-flex justify-content-center mt-5 charater_text0">나의 투자 성향은?</h3>
+		<section class="d-flex justify-content-center">
+			
+				
+			
+			<p class="d-flex align-items-center pr-3 charater_text1">현자</p>
+			<div>
+				<input type="checkbox" id="character" />
+				<label for="character">
+					<span class="knob">
+						<i></i>
+					</span>
+				</label>
+			</div>
+			<p class="d-flex align-items-center pl-3 charater_text2">야수</p>
+				
+		</section>
+
+		<script
+			class="jsbin"
+			src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"
+		></script>
+		<div class="container file-upload">
+			<div class="image-upload-wrap">
+				
+				<input
+					class="file-upload-input"
+					type="file"
+					onchange="readURL(this);"
+					accept="image/*"
+				/>
+				<div class="drag-text">
+					
+					<img id="image_character1" src="img/img1.png" alt="img1.png" class="mt-5 upload" width=50%>
+					<img id="image_character2" src="img/img2.png" alt="img2.png" class="mt-5 upload" width=50%>
+					
+					<h2>이미지를 올려주세요.</h2>
+					<h4>(이미지는 어디에도 저장되지 않습니다.)</h4>	
+				</div>
+				
+			</div>
+
+			
+			<div class="file-upload-content">
+				<img class="file-upload-image" id="face-image" src="#" alt="your image" />
+				<div id="loading" class="animated bounce">
+					<div class="spinner-border text-danger" role="status">
+						<span class="sr-only"></span>
+					</div>
+					<p class="text-center">AI가 당신의 동물상을 분석중입니다.</p>
+				</div>
+				<p class="result-message"></p>
+				<div id="label-container" class="d-flex flex-column justify-content-around"></div>
+
+				<div class="image-title-wrap">
+					<button
+						type="button p-2"
+						class="try-again-btn"
+						onclick="window.location.reload();"
+					>
+						<span class="try-again-text">다른 사진으로 재시도</span>
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<div id="webcam-container"></div>
+		</div>
+		<!-- 부트스트랩 스크립트 start -->
+		<!-- Optional JavaScript; choose one of the two! -->
+
+		<!-- Option 1: Bootstrap Bundle with Popper -->
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+			crossorigin="anonymous"
+		></script>
+
+		<!-- Option 2: Separate Popper and Bootstrap JS -->
+		<!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+    -->
+		<!-- 부트스트랩 스크립트 end -->
+
+		<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$('#image_character1').show();
+				$('#image_character2').hide();
+				$("#character").click(function () {
+						$('#image_character1').toggle();
+						$('#image_character2').toggle();
+				});
+			});
+			
+			function readURL(input) {
+				if (input.files && input.files[0]) {
+					var reader = new FileReader();
+					reader.onload = function (e) {
+
+						$('.image-upload-wrap').hide();
+						$('#loading').show();
+						$('.file-upload-image').attr('src', e.target.result);
+						$('.file-upload-content').show();
+
+						$('.image-title').html(input.files[0].name);
+					};
+
+					reader.readAsDataURL(input.files[0]);
+					init().then(function () {
+						console.log('hello');
+						predict();
+						$('#loading').hide();
+					});
+				} else {
+					removeUpload();
+				}
+			}
+
+			function removeUpload() {
+				$('.file-upload-input').replaceWith($('.file-upload-input').clone());
+				$('.file-upload-content').hide();
+				$('.image-upload-wrap').show();
+			}
+			$('.image-upload-wrap').bind('dragover', function () {
+				$('.image-upload-wrap').addClass('image-dropping');
+			});
+			$('.image-upload-wrap').bind('dragleave', function () {
+				$('.image-upload-wrap').removeClass('image-dropping');
+			});
+		</script>
+		<script type="text/javascript">
+			// More API functions here:
+			// https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
+
+			// the link to your model provided by Teachable Machine export panel
+			const url_wise = 'https://teachablemachine.withgoogle.com/models/kixmpS9xG/';
+			const url_beast = 'https://teachablemachine.withgoogle.com/models/kixmpS9xG/';
+			let model, webcam, labelContainer, maxPredictions;
+
+			// Load the image model and setup the webcam
+			async function init() {
+				if (document.getElementById('character').checked) {
+					URL = url_beast;
+				} else {
+					URL = url_wise;
+				}
+				const modelURL = URL + 'model.json';
+				const metadataURL = URL + 'metadata.json';
+				model = await tmImage.load(modelURL, metadataURL);
+				maxPredictions = model.getTotalClasses();
+				labelContainer = document.getElementById('label-container');
+				for (let i = 0; i < maxPredictions; i++) {
+					var element = document.createElement('div');
+					element.classList.add('d-flex');
+					labelContainer.appendChild(element);
+				}
+			}
+
+			// run the webcam image through the image model
+			async function predict() {
+				// predict can take in an image, video or canvas html element
+				var image = document.getElementById('face-image');
+				const prediction = await model.predict(image, false);
+				prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability)); //probability 높은 순으로 정렬
+				console.log(prediction[0].className);
+				var resultTitle, resultExplain, resultCeleb, resultMessege;
+				if (document.getElementById('character').checked) {
+					switch (
+						prediction[0].className //probability 가장 높은값 반환
+					) {
+						default:
+							resultTitle = '서비스 준비 중..';
+                        	resultExplain = '';
+                        	resultCeleb = '';
+					}
+				} else {
+					switch (prediction[0].className) {
+						case 'A01':
+							resultTitle = '삼성전자';
+                        	resultExplain = '故이건희 회장의 환생? 누가 뭐래도 대한민국 최고의 회사는 여기가 아닐까? 삼성전자 추천!';
+							resultCeleb = '닮은꼴 인물: 이건희';
+							break;
+						case 'A02':
+							resultTitle = '삼성물산';
+                        	resultExplain = '故이병철 회장의 환생? 당신은 삼성의 시초인 삼성물산을 떠올리게 하는군요. 당신에게 삼성물산을 추천합니다.';
+							resultCeleb = '닮은꼴 인물: 이병철';
+							break;
+						case 'A03':
+							resultTitle = '삼성물산';
+                        	resultExplain = '패션의 완성은 얼굴이라지? 패완얼인 당신에겐 제일모직!을 추천하려 했으나, 합병으로 삼성물산을 추천!';
+							resultCeleb = '닮은꼴 인물: 이서현';
+							break;
+						case 'A04':
+							resultTitle = '삼성SDI';
+                        	resultExplain = '삼성그룹의 수장! 최고의 CEO 이재용! 재드레곤의 기운을 받은 당신, 미래 먹거리 삼성SDI를 추천합니다.';
+							resultCeleb = '닮은꼴 인물: 이재용';
+							break;	
+						case 'A05':
+							resultTitle = '호텔신라';
+                        	resultExplain = '혹시 이부진 본인이세요? 삼성그룹 최초의 여성 CEO이자 삼성가 최고의 미녀! 당신에게 호텔신라를 추천합니다.';
+							resultCeleb = '닮은꼴 인물: 이부진';
+							break;
+						case 'A06':
+							resultTitle = '현대건설';
+                        	resultExplain = '故정주영 회장의 환생? 당신에겐 현대의 시초인 현대건설의 향이 강하게 나는군요. 당신에겐 현대건설을 추천합니다.';
+							resultCeleb = '닮은꼴 인물: 정주영';
+							break;
+						case 'A07':
+							resultTitle = '현대차';
+                        	resultExplain = '당신을 보고 있자니 품질경영의 달인, 정몽구 회장이 떠오르는군요. 당신에게 현대차를 추천합니다.';
+							resultCeleb = '닮은꼴 인물: 정몽구';
+							break;
+						case 'A08':
+							resultTitle = '현대모비스';
+                        	resultExplain = '현대차그룹의 미래는 여기에 달렸다?! 현대차그룹의 지배구조 개편에 핵심이 될 현대모비스! 얼른얼른 탑승하라규~';
+							resultCeleb = '닮은꼴 인물: 정의선';
+							break;	
+						case 'A09':
+							resultTitle = '현대중공업';
+                        	resultExplain = '아니 이 관상은!! 인중에서 부터 중공업의 기운이 강하게 감돌고 있군. 그렇다면! 현대중공업을 추천한다!';
+							resultCeleb = '닮은꼴 인물: 정몽준';
+							break;
+						case 'A10':
+							resultTitle = '롯데지주';
+                        	resultExplain = '혹시 과자 좋아하니? 뜬금없지? 그럼 롯데지주를 추천할께! 왜 롯데제과가 아닌 롯데지주를 추천했는지는 비밀~';
+							resultCeleb = '닮은꼴 인물: 신동빈';
+							break;
+						case 'A11':
+							resultTitle = 'SK하이닉스';
+                        	resultExplain = '혹시 이천에 사니? 아니면 혹시 이천 쌀 좋아하니? 미래의 쌀로 불리우는 반도체! SK하이닉스를 추천할께. (논리전개 무엇)';
+							resultCeleb = '닮은꼴 인물: 최태원';
+							break;
+						case 'A12':
+							resultTitle = 'SK하이닉스';
+                        	resultExplain = '풍채를 보아하니, 장투의 귀재로 구나! 10년이상 장투할 상이야!! 당신에게 SK하이닉스를 추천한다!';
+							resultCeleb = '닮은꼴 인물: 전원주';
+							break;	
+						case 'A13':
+							resultTitle = 'LG전자';
+                        	resultExplain = '故구본무 회장의 환생? 럭키금성은 잊어라! "사랑해요~ LG~" 당신에게 LG전자를 추천합니다.';
+							resultCeleb = '닮은꼴 인물: 구본무';
+							break;
+						case 'A14':
+							resultTitle = 'LG화학';
+                        	resultExplain = '요즘 배터리 회사들이 제일 핫한거 알고 있지? 앞으로 10년 20년 먹거리니까 지금 오른건 오른것도 아니야~ LG화학 추천할께. (혹시 LG에너지솔루션이 상장하거든 LG에솔로 사라..)';
+							resultCeleb = '닮은꼴 인물: 구광모';
+							break;
+						case 'A15':
+							resultTitle = '한화';
+                        	resultExplain = '주변에서 의리있다는 얘기 자주 듣지? 혹시 복싱도 좋아하려나? 아 여기 너에게 딱맞는 주식이 있네. 한화를 추천할께 >_<';
+							resultCeleb = '닮은꼴 인물: 김승연';
+							break;
+						case 'A16':
+							resultTitle = '한화솔루션';
+                        	resultExplain = '어떻게 이렇게 모범적일 수 있죠? 외모뿐 아니라 마음도 훈훈한 당신! 지구까지 생각하는 당신을 위해, 한화솔루션을 추천합니다.';
+							resultCeleb = '닮은꼴 인물: 김동관';
+							break;	
+						case 'A17':
+							resultTitle = '셀트리온';
+                        	resultExplain = '공매도가 싫은 당신, 공매도와 싸우고 싶은 당신, 그러나 언제나 희망찬 당신! 참전하라 셀트리온에!';
+							resultCeleb = '닮은꼴 인물: 서정진';
+							break;
+						case 'A18':
+							resultTitle = '두산중공업';
+                        	resultExplain = '"사람이 미래다"로 유명한 회사. 장투를 하기에 이만한 회사가 있을까. 현재 최저점으로 길게 모아가보자! (에이 설마 망하기야 하겠어?)';
+							resultCeleb = '닮은꼴 인물: 박용만';
+							break;
+						case 'A19':
+							resultTitle = '두산퓨얼셀';
+                        	resultExplain = '장동민이 100% 이상 수익을 올렸다던데.. 우리라고 못할쏘냐! 미래 에너지 수소, 미리미리 투자해보자!';
+							resultCeleb = '닮은꼴 인물: 장동민';
+							break;
+						case 'A20':
+							resultTitle = '신세계';
+                        	resultExplain = '카리스마 넘치는 당신, 눈빛이 신세계 그룹 이명희 회장이 떠오르는군요. 대한민국 대표 유통업 신세계를 추천한다!';
+							resultCeleb = '닮은꼴 인물: 이명희';
+							break;	
+						case 'A21':
+							resultTitle = '이마트';
+                        	resultExplain = '이마트에서 장사(?)하시는 분과 많이 닮으셨군요. 이것은 운명, 데스티니! 이마트를 추천합니다. (앞으로 홈플러스, 롯데마트 안가기로 약속~)';
+							resultCeleb = '닮은꼴 인물: 정용진';
+							break;
+						case 'A22':
+							resultTitle = '대한항공';
+                        	resultExplain = '우리 돈 많이 벌어서 비행기타고 해외여행 가자~ 비행기하면 뭐다? 대한항공!';
+							resultCeleb = '닮은꼴 인물: 조원태';
+							break;
+						case 'A23':
+							resultTitle = '안랩';
+                        	resultExplain = '다재다능한 당신! 코로나는 없애지 못하지만 컴퓨터 바이러스는 없앨수 있다규~ 꾸잉! 안랩 추천!';
+							resultCeleb = '닮은꼴 인물: 안철수';
+							break;
+						case 'A24':
+							resultTitle = '에스엠';
+                        	resultExplain = '과장 살짝보태서 아이돌 처럼 생겼네? ㅎㅎ 그것도 SM엔터 출신 아이돌 느낌이 물씬~ 에스엠을 추천한다!';
+							resultCeleb = '닮은꼴 인물: 이수만';
+							break;	
+						case 'A25':
+							resultTitle = '에스엠';
+                        	resultExplain = '당신 아이돌이지? 그렇지? 혹시 아니라면 당장 아이돌 준비를 해도 되겠어. 물론 SM엔터에서 하는거 잊지말라규!';
+							resultCeleb = '닮은꼴 인물: 윤아';
+							break;
+						case 'A26':
+							resultTitle = 'JYP Ent.';
+                        	resultExplain = '박진영의 아우라가 당신에게서 보이는 이유는 뭐지? 이건 JYP엔터를 사야한다는 하늘의 계시가 아닐까? (못생겼다는 뜻 아님! 진짜 아님!)';
+							resultCeleb = '닮은꼴 인물: 박진영';
+							break;
+						case 'A27':
+							resultTitle = 'JYP Ent.';
+                        	resultExplain = '어머님이 누구니~ 어떻게 널 이렇게 낳아주셨니~ 쉣댓뽯뎃부비부비 JYP 엔터를 추천합니다.';
+							resultCeleb = '닮은꼴 인물: 쯔위';
+							break;
+						case 'A28':
+							resultTitle = '와이지엔터테인먼트';
+                        	resultExplain = '잦은 구설수에 오르지만 대한민국 대표 엔터테인먼트 회사임을 부정할 수는 없다. 앞으로 잘 될 일만 남았다고 생각되어 추천한다!';
+							resultCeleb = '닮은꼴 인물: 양현석';
+							break;	
+						case 'A29':
+							resultTitle = '와이지엔터테인먼트';
+                        	resultExplain = '요즘 가장 핫한 블랙핑크 제니 맞지? 뭐? 아니라고?? 아니라면 진심 아이돌 데뷔하러 가자! 아, 주식은 와이지 사놓고!! ';
+							resultCeleb = '닮은꼴 인물: 제니';
+							break;
+						case 'A30':
+							resultTitle = '빅히트';
+                        	resultExplain = '거기 당신! 꿈을 크게 가져봐! 음..엔터테인먼트 회사랑 비교하지 말아줄래? 네이버, 카카오랑 싸울꺼니까! 빅히트!';
+							resultCeleb = '닮은꼴 인물: 방시혁';
+							break;
+						case 'A31':
+							resultTitle = '빅히트';
+                        	resultExplain = '히트다 히트! 당신은 빅히트다!';
+							resultCeleb = '닮은꼴 인물: 김신영';
+							break;
+						case 'A32':
+							resultTitle = '키이스트';
+                        	resultExplain = '이 주식을 추천받는 당신은 어쩌면 벌써 성공한 인생을 살고 있을지 모른다. 아니 최소한 부러운 인생일 것이다. 부럽다, 그 잘생긴 얼굴.';
+							resultCeleb = '닮은꼴 인물: 배용준';
+							break;	
+						case 'A33':
+							resultTitle = '키이스트';
+                        	resultExplain = '소싯적 학교에서 인기 좀 많았을 것 같은 당신. 분명 배우자도 멋진 사람일꺼야. 여기 당신과 딱 어울리는 주식이 있어 추천한다!';
+							resultCeleb = '닮은꼴 인물: 박수진';
+							break;	
+						case 'A34':
+							resultTitle = '카카오';
+                        	resultExplain = '카카오톡 메신저 하나로 시작해 지금은 대한민국 시총 9위! 문어발식 확장으로 발전가능성 무궁무진! 사라, 카카오!';
+							resultCeleb = '닮은꼴 인물: 김범수';
+							break;
+						case 'A35':
+							resultTitle = '카카오';
+                        	resultExplain = '혹시 아이유 본인이세요? 당신을 보고 있자니 아이유가 떠오르네요. 그렇다면 카카오를 추천하는 수 밖에!';
+                        	resultCeleb = '닮은꼴 인물: 아이유';
+							break;
+						case 'A36':
+							resultTitle = '네이버';
+                        	resultExplain = '대한민국 대표 IT기업 네이버! 네이버가 쿠팡보다 싸다고? 그럼 저평가 아닌가? 네이버 가즈아~';
+							resultCeleb = '닮은꼴 인물: 이해진';
+							break;
+						case 'A37':
+							resultTitle = '네이버';
+                        	resultExplain = '시가총액 60조! 대한민국 시가총액 3위기업! 전세계로 뻗어나가는 네이버~ 가즈아~';
+							resultCeleb = '닮은꼴 인물: 한성숙';
+							break;	
+						case 'A38':
+							resultTitle = '쿠팡';
+                        	resultExplain = '매년 적자를 기록하고 있지만 기업가치는 100조? 로켓배송을 한번이라도 써본 사람은 바로 수긍해버리는 그 기업! 쿠팡!';
+							resultCeleb = '닮은꼴 인물: 김범석';
+							break;	
+						case 'A39':
+							resultTitle = '엔씨소프트';
+                        	resultExplain = '택진이형 왜 이제 왔어?! 곧 신작 출시 한다며? 뭐? 엔씨소프트 사라고? 응, 당장 살께!';
+							resultCeleb = '닮은꼴 인물: 김택진';
+							break;
+						case 'A40':
+							resultTitle = '엔씨소프트';
+                        	resultExplain = '나도 어렸을 때 리니지 안하고 공부했으면 엔씨소프트 사장될 수 있었는데!! 중딩땐 리니지, 고딩땐 리니지2, 대딩땐 블소.. 내 인생아 미안하다..';
+							resultCeleb = '닮은꼴 인물: 윤송이';
+							break;
+						case 'A41':
+							resultTitle = '맥쿼리인프라';
+                        	resultExplain = '장투하는 당신에게 배당주가 빠질 수 없지! 배당주의 대명사 맥쿼리인프라를 추천할께! (근데 이거 그 분 관련주 맞지?)';
+							resultCeleb = '닮은꼴 인물: 이명박';
+							break;
+						case 'B01':
+							resultTitle = '테슬라';
+                        	resultExplain = '테멘! 말이 필요없지. 이게 단순히 자동차 회사라고 생각해? ㄴㄴ 일론 머스크의 꿈과 비전을 믿어보라구!';
+							resultCeleb = '닮은꼴 인물: 일론 머스크';
+							break;	
+						case 'B02':
+							resultTitle = '페이스북';
+                        	resultExplain = '너 싸이월드 해봤지? 언제적 싸이냐고? 한 20년 됐나.. 그럼 페북은 어때? 뭐 요즘 누가 페북을 하냐고? 음..그래도 요즘 인스타는 많이들 하지?';
+							resultCeleb = '닮은꼴 인물: 마크 저커버그';
+							break;	
+						case 'B03':
+							resultTitle = '아마존';
+                        	resultExplain = '혹시 정말 실례가 되지 않는다면.. 대머리야? 아니면 다행이다, AI도 실수 할 수는 있나봐.. 이렇게 결과 나온김에 아마존 주식 살래? 한 주가 조금 비싸긴 한데.. 열심히 모아서 사보자~';
+							resultCeleb = '닮은꼴 인물: 제프 베조스';
+							break;	
+						case 'B04':
+							resultTitle = '마이크로소프트';
+                        	resultExplain = '그거 알아? 빌 게이츠는 길 바닥에 떨어진 100달러짜리 지폐를 줍겠데.. 물론 우린 100원짜리도 주워서 투자해야지 않그래? 마소에 투자해서 빌 게이츠가 되어보자규~';
+							resultCeleb = '닮은꼴 인물: 빌 게이츠';
+							break;	
+						case 'B05':
+							resultTitle = '애플';
+                        	resultExplain = '전세계 시총 1위 기업. IOS 생태계를 만든 장본인. 너 스티브 잡스 닮았다? 근데 넌 왜이러고 사니? ';
+							resultCeleb = '닮은꼴 인물: 스티브 잡스';
+							break;	
+						case 'B06':
+							resultTitle = '엔비디아';
+                        	resultExplain = '비트코인 알지? 그거 캘려면 그래픽 카드 필요한거 알아 몰라? 그럼 당연히 그래픽 카드 만드는 회사가 잘 나가겠지? 응?';
+							resultCeleb = '닮은꼴 인물: 젠슨 황';
+							break;	
+						case 'B07':
+							resultTitle = '알파벳A';
+                        	resultExplain = '너 래리 페이지가 누군지 아니? 그것도 몰라? 구글 창업자 중 한명이잖아! 뭐, 나도 얼마전에 알았어.. 여튼 알파벳A를 추천할께. 웬 알파벳A냐고? 이게 구글 주식이야! 미안, 나도 얼마전에 알았어..';
+							resultCeleb = '닮은꼴 인물: 래리 페이지';
+							break;	
+						case 'B08':
+							resultTitle = '알파벳C';
+                        	resultExplain = '너 세르게이 브린이 누군지 아니? 그것도 몰라? 구글 창업자 중 한명이잖아! 뭐, 나도 얼마전에 알았어.. 여튼 알파벳C를 추천할께. 웬 알파벳C냐고? 이게 구글 주식이야! 미안, 나도 얼마전에 알았어..';
+							resultCeleb = '닮은꼴 인물: 세르게이 브린';
+							break;	
+						default:
+							resultTitle = '';
+                        	resultExplain = '';
+							resultCeleb = '닮은꼴 인물: 알수없음';
+					}
+				}
+				var title = "<div class='stock-title'>" + resultTitle + "</div>"
+				var explain = "<div class='stock-explain pt-2'>" + resultExplain + "</div>"
+				var celeb = "<div class='stock-celeb pt-2 pb-2'>" + resultCeleb + "</div>"
+
+				//$('.result-message').html(resultMessege); //html안의 result-message에 resultMessage를 보냄
+				$('.result-message').html(title + explain + celeb);
+				var barWidth;
+				for (let i = 0; i < 5; i++) {
+					//for (let i = 0; i < maxPredictions; i++)
+					if (prediction[i].probability.toFixed(2) > 0.1) {
+						barWidth = Math.round(prediction[i].probability.toFixed(2) * 100) + '%';
+					} else if (prediction[i].probability.toFixed(2) >= 0.01) {
+						barWidth = '4%';
+					} else {
+						barWidth = '2%';
+					}
+					var labelTitle;
+					if (document.getElementById('character').checked) {
+						switch (prediction[i].className) {
+					
+							default:
+								labelTitle = '알수없음';
+						}
+					} else {
+						switch (prediction[i].className) {
+						case 'A01':
+							labelTitle = '삼성전자';
+							break;
+						case 'A02':
+							labelTitle = '삼성물산';
+							break;
+						case 'A03':
+							labelTitle = '삼성물산';
+							break;
+						case 'A04':
+							labelTitle = '삼성SDI';
+							break;	
+						case 'A05':
+							labelTitle = '호텔신라';
+							break;
+						case 'A06':
+							labelTitle = '현대건설';
+							break;
+						case 'A07':
+							labelTitle = '현대차';
+							break;
+						case 'A08':
+							labelTitle = '현대모비스';
+							break;	
+						case 'A09':
+							labelTitle = '현대중공업';
+							break;
+						case 'A10':
+							labelTitle = '롯데지주';
+							break;
+						case 'A11':
+							labelTitle = 'SK하이닉스';
+							break;
+						case 'A12':
+							labelTitle = 'SK하이닉스';
+							break;	
+						case 'A13':
+							labelTitle = 'LG전자';
+							break;
+						case 'A14':
+							labelTitle = 'LG화학';
+							break;
+						case 'A15':
+							labelTitle = '한화';
+							break;
+						case 'A16':
+							labelTitle = '한화솔루션';
+							break;	
+						case 'A17':
+							labelTitle = '셀트리온';
+							break;
+						case 'A18':
+							labelTitle = '두산중공업';
+							break;
+						case 'A19':
+							labelTitle = '두산퓨얼셀';
+							break;
+						case 'A20':
+							labelTitle = '신세계';
+							break;	
+						case 'A21':
+							labelTitle = '이마트';
+							break;
+						case 'A22':
+							labelTitle = '대한항공';
+							break;
+						case 'A23':
+							labelTitle = '안랩';
+							break;
+						case 'A24':
+							labelTitle = '에스엠';
+							break;	
+						case 'A25':
+							labelTitle = '에스엠';
+							break;
+						case 'A26':
+							labelTitle = 'JYP Ent.';
+							break;
+						case 'A27':
+							labelTitle = 'JYP Ent.';
+							break;
+						case 'A28':
+							labelTitle = '와이지엔터테인먼트';
+							break;	
+						case 'A29':
+							labelTitle = '와이지엔터테인먼트';
+							break;
+						case 'A30':
+							labelTitle = '빅히트';
+							break;
+						case 'A31':
+							labelTitle = '빅히트';
+							break;
+						case 'A32':
+							labelTitle = '키이스트';
+							break;	
+						case 'A33':
+							labelTitle = '키이스트';
+							break;	
+						case 'A34':
+							labelTitle = '카카오';
+							break;
+						case 'A35':
+							labelTitle = '카카오';
+                        	
+							break;
+						case 'A36':
+							labelTitle = '네이버';
+							break;
+						case 'A37':
+							labelTitle = '네이버';
+							break;	
+						case 'A38':
+							labelTitle = '쿠팡';
+							break;	
+						case 'A39':
+							labelTitle = '엔씨소프트';
+							break;
+						case 'A40':
+							labelTitle = '엔씨소프트';
+							break;
+						case 'A41':
+							labelTitle = '맥쿼리인프라';
+							break;
+						case 'B01':
+							labelTitle = '테슬라';
+							break;	
+						case 'B02':
+							labelTitle = '페이스북';
+							break;	
+						case 'B03':
+							labelTitle = '아마존';
+							break;	
+						case 'B04':
+							labelTitle = '마이크로소프트';
+							break;	
+						case 'B05':
+							labelTitle = '애플';
+							break;	
+						case 'B06':
+							labelTitle = '엔비디아';
+							break;	
+						case 'B07':
+							labelTitle = '알파벳A';
+							break;	
+						case 'B08':
+							labelTitle = '알파벳C';
+							break;	
+						default:
+							labelTitle = '알수없음';
+						}
+					}
+					var label =
+						"<div class='stock-label d-flex align-items-center'>" +
+						labelTitle +
+						'</div>';
+					var bar =
+						"<div class='bar-container position-relative container'><div class='" +
+						prediction[i].className +
+						"-box'></div><div class='d-flex justify-content-center align-items-center " +
+						prediction[i].className +
+						"-bar' style='width: " +
+						barWidth +
+						"'><span class='d-block percent-text'>" +
+						Math.round(prediction[i].probability.toFixed(2) * 100) +
+						'%</span></div></div>';
+					labelContainer.childNodes[i].innerHTML = label + bar;
+				}
+			}
+		</script>
+	
+	</body>
+
+	<!-- Copyright (c) 2021 by Aaron Vanston (https://codepen.io/aaronvanston/pen/yNYOXR)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. -->
+</html>
