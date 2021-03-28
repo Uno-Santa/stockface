@@ -498,7 +498,7 @@ body {
   input:checked + label > .knob { 
     
 	box-shadow: 0 0 0 8px #f470a7 inset;
-    background-color: #fbd4e6;`
+    background-color: #fbd4e6;
     transform: translateX(49px) rotate(-140deg);	  
   }
 
