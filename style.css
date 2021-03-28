@@ -384,7 +384,7 @@ body {
   height: 2rem;
   border-radius: 10px;
   width: 100%;
-  background-color: rgba(230, 67, 222, 0.2);
+  background-color: rgba(238, 111, 232, 0.2);
 }
 .A10-bar, .A20-bar, .A30-bar, .A40-bar, .A50-bar, .B10-bar {
   position: absolute;
@@ -392,7 +392,7 @@ body {
   left: 0;
   height: 2rem;
   border-radius: 10px;
-  background-color: rgba(230, 67, 222, 1);
+  background-color: rgba(238, 111, 232, 1);
 }
 
 
