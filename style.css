@@ -420,7 +420,9 @@ body {
     text-align: left;
     height: 2rem;
 	font-size: 1.3rem;
+	line-height: 0.9;
 }
+
 #label-container {
     width: 90%;
     margin: 0 auto;
