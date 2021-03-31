@@ -55,6 +55,11 @@ body {
 	font-weight: 700;
 }
 
+.warning {
+  	font-size: 1.2rem;
+	color: #abacad;
+}
+
 .file-upload {
   background-color: #f6f7fa;
   width: 600px;
@@ -211,13 +216,13 @@ body {
 /* On screens that are 600px or less, set the background color to olive */
 @media screen and (max-width: 600px) {
   html {
-    font-size: 10px;
+    font-size: 12px;
   }
     .navbar-brand {
-        font-size: 2rem;
+        font-size: 1.7rem;
     }
 	.nav-link {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 }
 
