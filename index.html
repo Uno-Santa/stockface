@@ -240,7 +240,7 @@
 
 			// the link to your model provided by Teachable Machine export panel
 			const url_wise = 'https://teachablemachine.withgoogle.com/models/kixmpS9xG/';
-			const url_beast = 'https://teachablemachine.withgoogle.com/models/kixmpS9xG/';
+			const url_beast = 'https://teachablemachine.withgoogle.com/models/l4s2dTUhV/';
 			let model, webcam, labelContainer, maxPredictions;
 
 			// Load the image model and setup the webcam
@@ -271,13 +271,187 @@
 				console.log(prediction[0].className);
 				var resultTitle, resultExplain, resultCeleb, resultMessege;
 				if (document.getElementById('character').checked) {
-					switch (
-						prediction[0].className //probability 가장 높은값 반환
-					) {
+					switch (prediction[0].className) { //probability 가장 높은값 반환
+					
+						case 'A01':
+							resultTitle = '빅텍';
+							resultExplain ='혹시 빅텍 알아? 알고 있다면 주린이는 아니군! 긴말하지 않을께. 북한에서 미사일만 쏘면 간다규! 방산주 빅텍으로 가즈아~';
+							resultCeleb = '닮은꼴 인물: 김정은';
+							break;
+						case 'A02':
+							resultTitle = '빅텍';
+							resultExplain ='저기 북쪽 동네의 말 하나, 행동 하나에 움찔 움찔 하는 주식이 있는데.. 간혹 엄청난 슈팅을 보여준다규~ 단타한번 가즈아~';
+							resultCeleb = '닮은꼴 인물: 김여정';
+							break;
+						case 'A03':
+							resultTitle = '남선알미늄';
+							resultExplain ='역시 급등주의 꽃은 정치테마주 아니겠어? 대선, 총선, 지선, 재보선.. 정치 테마주만 해도 평생을 하겠네! 보자, 이걸로 대선까지 재미 한번 봐볼까? ';
+							resultCeleb = '닮은꼴 인물: 이낙연';
+							break;
+						case 'A04':
+							resultTitle = '모베이스전자';
+							resultExplain ='최근 가장 핫한 정치테마주! 무려 대선 선호도 1위! 대선까지 가즈아~';
+							resultCeleb = '닮은꼴 인물: 윤석열';
+							break;
+						case 'A05':
+							resultTitle = '덕성';
+							resultExplain ='대표이사가 서울법대 나왔다던가? 누구랑 동문이라 던가? 테마주야 이유를 붙이기 나름 아니겠어? 일단 타보자!!';
+							resultCeleb = '닮은꼴 인물: 배우 박정수';
+							break;
+						case 'A06':
+							resultTitle = '에이텍티앤';
+							resultExplain ='이분 테마주도 핫하지! 무려 여권 1, 2위에 거론되는 인물인데.. 일단 이 주식으로 시작해 보는건 어때?';
+							resultCeleb = '닮은꼴 인물: 이재명';
+							break;
+						case 'A07':
+							resultTitle = '써니전자';
+							resultExplain ='서울시장 단일화 실패로 급락.. 하지만 아직 빅이벤트는 오지 않았다!! 저점 매수후 대선까지 가보자!!';
+							resultCeleb = '닮은꼴 인물: 안철수';
+							break;
+						case 'A08':
+							resultTitle = '써니전자';
+							resultExplain ='저기 이게.. 정치 테마주긴 한데.. 사실 관상이랑 별 관계가 없어보이긴 한데.. 이유는 붙이기 나름 아니겠어? 오르면 그만이지~ 가즈아!';
+							resultCeleb = '닮은꼴 인물: 소녀시대 써니';
+							break;
+						case 'A09':
+							resultTitle = '비트코인';
+							resultExplain ='미래를 준비하는 야수라면 이거지! 2030년 비트코인 채굴이 끝날 것으로 예상되는데, 그럼 이거 없어서 못구하는거 아니겠음?';
+							resultCeleb = '닮은꼴 인물: 황정민';
+							break;
+						case 'A10':
+							resultTitle = '삼성출판사';
+							resultExplain ='"아기상어 뚜루루뚜루 귀여운 뚜루루뚜루~" 이 노래 알지? 여기 2대 주주가 삼성출판사래! ';
+							resultCeleb = '닮은꼴 인물: 노홍철';
+							break;
+						case 'A11':
+							resultTitle = '신풍제약';
+							resultExplain ='야수는 자고로 저 넓고 푸른 세렝게티와 같은 곳에서 놀아야하지 않겠어? 여기 코스닥에 세렝게티와 같은 곳이 있어! 그야말로 야생이지! ';
+							resultCeleb = '닮은꼴 인물: 김종민';
+							break;
+						case 'A12':
+							resultTitle = '데브시스터즈';
+							resultExplain ='맨날 달리기만 하던 쿠키가 왕국을 건설해서 대박이 터졌다며? 뭐야 10배가 올랐어? 야수라면 참전 해야지!';
+							resultCeleb = '닮은꼴 인물: 가수 이지훈';
+							break;
+						case 'A13':
+							resultTitle = '효성';
+							resultExplain ='사실 야수들이 탑승하기엔 너무 우량하다! 누군가 왜 효성에 투자했냐고 묻거든 이렇게 답하자! 전 효성이 좋아요^^';
+							resultCeleb = '닮은꼴 인물: 전효성';
+							break;
+						case 'A14':
+							resultTitle = '박셀바이오';
+							resultExplain ='꿈과 희망을 먹고사는 바이오! 우리 돈을 투자해서 더욱 혼내주자! 아, 참고로 이 회사에 대해 설명하자면.. 여백이 부족하여 적진 않을께..';
+							resultCeleb = '닮은꼴 인물: 박세리';
+							break;
+						case 'A15':
+							resultTitle = '신풍제지';
+							resultExplain ='코로나로 택배가 초호황이래! 어디보자, 그럼 택배를 보내려면 박스가 있어야되고, 종이가 많이 필요하겠네..? 근데 이름이 또 신풍이네? 이거지!!';
+							resultCeleb = '닮은꼴 인물: 태사자 김형준';
+							break;
+						case 'A16':
+							resultTitle = 'NE능률';
+							resultExplain ='온라인 사교육 시장 급성장 + 정치테마주? 뭐야 뭐야, 이슈가 두개인거야? 그럼 가는거지!!';
+							resultCeleb = '닮은꼴 인물: 악동뮤지션 이수현';
+							break;
+						case 'A17':
+							resultTitle = '금강철강';
+							resultExplain ='최근 핫한 정치테마주 중 하나! 이름부터가 단단~한게 참 마음에 드네. 좋아 너 추천!';
+							resultCeleb = '닮은꼴 인물: 리쌍 길';
+							break;
+						case 'A18':
+							resultTitle = '아주IB투자';
+							resultExplain ='크래프톤! 야놀자! 뭐야 대형 IPO 호재가 두개라고? 이건 무조건이다!!';
+							resultCeleb = '닮은꼴 인물: 지석진';
+							break;
+						case 'A19':
+							resultTitle = '동방';
+							resultExplain ='이런 말 해서 정말 미안한데, 사실 뭐하는 회산지 몰라.. 그냥 급등하길래 추천했어..';
+							resultCeleb = '닮은꼴 인물: 최강창민';
+							break;
+						case 'A20':
+							resultTitle = '지트리비앤티';
+							resultExplain ='미국에서 안구건조증 임상시험을 했는데, 결과가 크게 좋지 않아서 일까..지하실까지 뚫고 들어가네.. 우리 야수 형님들은 이런거 또 못참지 반등 가즈아~';
+							resultCeleb = '닮은꼴 인물: 자이언티';
+							break;
+						case 'A21':
+							resultTitle = '흥국에프엔비';
+							resultExplain ='최근 마켓컬리 관련주로 부쩍 떠오른 기업! 마켓컬리 IPO 까지 들고 가보자~ 아싸 호랑나비~';
+							resultCeleb = '닮은꼴 인물: 김흥국';
+							break;
+						case 'A22':
+							resultTitle = 'HMM';
+							resultExplain ='수해즈 운하가 막혔다고? 해운 운임이 상승해? 그럼 이거지!!';
+							resultCeleb = '닮은꼴 인물: 박덕흠';
+							break;
+						case 'A23':
+							resultTitle = '팜스토리';
+							resultExplain ='대표 양돈주 테마! 요즘 돼지고기 가격이 비싸다는데, 돼지 열병 때문인가? 아오 삼겹살 먹고 싶은데 주식으로 돈 벌어서 사먹자!!';
+							resultCeleb = '닮은꼴 인물: 민경훈';
+							break;
+						case 'A24':
+							resultTitle = '네오위즈홀딩스';
+							resultExplain ='가상화폐 상승 수혜주! 요즘 비트코인이 얼마더라..? 블록체인은 또 뭐더라..? 몰라도 돼! 그냥 탑승해!!';
+							resultCeleb = '닮은꼴 인물: 키아누 리브스';
+							break;
+						case 'A25':
+							resultTitle = '모더나';
+							resultExplain ='와~ 차트 예술이다!! 딘딘이 이걸로 몇 프로 먹었더라? 나라고 못할쏘냐! 동학개미들아 미장도 가즈아~';
+							resultCeleb = '닮은꼴 인물: 딘딘';
+							break;
+						case 'A26':
+							resultTitle = '게임스탑';
+							resultExplain ='미장에서 가장 핫한 주식! 아직도 끝나지 않았다! 빠르게 단타로 먹고 나오자!';
+							resultCeleb = '닮은꼴 인물: 홍진영';
+							break;
+						case 'A27':
+							resultTitle = '게임스탑';
+							resultExplain ='미친 변동성! 믿어져? 하루에 ±50%를 왔다갔다 한다구!! 뭐해 야수형들 언능오지 않구!';
+							resultCeleb = '닮은꼴 인물: 페이커 이상혁';
+							break;
+						case 'A28':
+							resultTitle = '이항홀딩스';
+							resultExplain ='이렇게 무너질 이항이 아니다! 중국 기업이라는게 살짝 찜찜하지만, 뭐 어때! 우리는 단타 야수들이 아닌가!!';
+							resultCeleb = '닮은꼴 인물: 신화 김동완';
+							break;
+						case 'A29':
+							resultTitle = '테슬라';
+							resultExplain ='테슬라 만큼 우량하면서도 단타 매력이 넘치는 주식이 또 있을까! 아직 아기 야수인 당신에게 테슬라를 추천한다! 테멘!!';
+							resultCeleb = '닮은꼴 인물: 러블리즈 미주';
+							break;
+						case 'A30':
+							resultTitle = 'KODEX 레버리지';
+							resultExplain ='야수의 입문서라 불리우는 주식이 몇 개 있는데, 그중 기본중의 기본인 주식! 일단 주가는 우상향이니까 이걸로 시작해 보자구! (주식 유튜브는 슈카월드 짱!)';
+							resultCeleb = '닮은꼴 인물: 유튜버 슈카';
+							break;
+						case 'A31':
+							resultTitle = 'KODEX 코스닥150레버리지';
+							resultExplain ='레버리지가 뭔줄 알지? 오른만큼 두배로 먹는거야! 우리 야수 형들 의리로 한번 코스닥 떡상 가보자의리!!';
+							resultCeleb = '닮은꼴 인물: 김보성';
+							break;
+						case 'A32':
+							resultTitle = 'KODEX 200선물인버스2X';
+							resultExplain ='진정한 야수라면 시장이 안좋을때도 돈을 버는 법! 그것도 두배로!';
+							resultCeleb = '닮은꼴 인물: 조영구';
+							break;
+						case 'A33':
+							resultTitle = 'KODEX 200선물인버스';
+							resultExplain ='요즘 장이 영 안좋은거 같은데, 안그래? 그럼 숏으로 살짝 먹고 빠져볼까?';
+							resultCeleb = '닮은꼴 인물: 정준하';
+							break;
+						case 'A34':
+							resultTitle = '삼성 레버리지 WTI원유 선물 ETN';
+							resultExplain ='내 차 기름값이 자꾸 올라 걱정이라면 이 주식을 준비하자! 사우디아라비아 왕세자가 이 주식을 좋아합니다!';
+							resultCeleb = '닮은꼴 인물: 빈 살만';
+							break;
+						case 'A35':
+							resultTitle = '삼성 인버스 2X WTI원유 선물 ETN';
+							resultExplain ='"뭐? 원유를 샀는데 돈도 같이 준다고? 그런게 어딨어!" 가 실제로 일어났습니다. (만수르 형이 이 주식을 싫어합니다.)';
+							resultCeleb = '닮은꼴 인물: 만수르';
+							break;							
 						default:
-							resultTitle = '서비스 준비 중..';
-							resultExplain = '';
-							resultCeleb = '';
+							resultTitle = '적금';
+							resultExplain = '주식할 관상이 아니군.. 은행 적금은 어때?';
+							resultCeleb = '닮은꼴 인물: 알수없음';
 					}
 				} else {
 					switch (prediction[0].className) {
@@ -575,8 +749,8 @@
 							resultCeleb = '닮은꼴 인물: 세르게이 브린';
 							break;
 						default:
-							resultTitle = '';
-							resultExplain = '';
+							resultTitle = '적금';
+							resultExplain = '주식할 관상이 아니군.. 은행 적금은 어때?';
 							resultCeleb = '닮은꼴 인물: 알수없음';
 					}
 				}
@@ -599,8 +773,113 @@
 					var labelTitle;
 					if (document.getElementById('character').checked) {
 						switch (prediction[i].className) {
+							case 'A01':
+								labelTitle = '빅텍';
+								break;
+							case 'A02':
+								labelTitle = '빅텍';
+								break;
+							case 'A03':
+								labelTitle = '남선알미늄';
+								break;
+							case 'A04':
+								labelTitle = '모베이스전자';
+								break;
+							case 'A05':
+								labelTitle = '덕성';
+								break;
+							case 'A06':
+								labelTitle = '에이텍티앤';
+								break;
+							case 'A07':
+								labelTitle = '써니전자';
+								break;
+							case 'A08':
+								labelTitle = '써니전자';
+								break;
+							case 'A09':
+								labelTitle = '비트코인';
+								break;
+							case 'A10':
+								labelTitle = '삼성출판사';
+								break;
+							case 'A11':
+								labelTitle = '신풍제약';
+								break;
+							case 'A12':
+								labelTitle = '데브시스터즈';
+								break;
+							case 'A13':
+								labelTitle = '효성';
+								break;
+							case 'A14':
+								labelTitle = '박셀바이오';
+								break;
+							case 'A15':
+								labelTitle = '신풍제지';
+								break;
+							case 'A16':
+								labelTitle = 'NE능률';
+								break;
+							case 'A17':
+								labelTitle = '금강철강';
+								break;
+							case 'A18':
+								labelTitle = '아주IB투자';
+								break;
+							case 'A19':
+								labelTitle = '동방';
+								break;
+							case 'A20':
+								labelTitle = '지트리비앤티';
+								break;
+							case 'A21':
+								labelTitle = '흥국에프엔비';
+								break;
+							case 'A22':
+								labelTitle = 'HMM';
+								break;
+							case 'A23':
+								labelTitle = '팜스토리';
+								break;
+							case 'A24':
+								labelTitle = '네오위즈홀딩스';
+								break;
+							case 'A25':
+								labelTitle = '모더나';
+								break;
+							case 'A26':
+								labelTitle = '게임스탑';
+								break;
+							case 'A27':
+								labelTitle = '게임스탑';
+								break;
+							case 'A28':
+								labelTitle = '이항홀딩스';
+								break;
+							case 'A29':
+								labelTitle = '테슬라';
+								break;
+							case 'A30':
+								labelTitle = 'KODEX레버';
+								break;
+							case 'A31':
+								labelTitle = '코스닥150레버';
+								break;
+							case 'A32':
+								labelTitle = '200선물곱버스';
+								break;
+							case 'A33':
+								labelTitle = '200선물인버스';
+								break;
+							case 'A34':
+								labelTitle = '레버WTI원유선물';
+								break;
+							case 'A35':
+								labelTitle = '곱버스WTI원유선물';
+								break;
 							default:
-								labelTitle = '알수없음';
+								labelTitle = '적금';
 						}
 					} else {
 						switch (prediction[i].className) {
@@ -753,7 +1032,7 @@
 								labelTitle = '알파벳C';
 								break;
 							default:
-								labelTitle = '알수없음';
+								labelTitle = '적금';
 						}
 					}
 					var label =
